@@ -1,0 +1,37 @@
+
+<h3>Leave Request List</h3>
+  
+<table class="table">
+
+        <thead>
+            <tr>
+            <th>LeaveId</th>
+            <th>UserId</th>
+            <th>LeaveFrom</th>
+            <th>LeaveTo</th>
+            <th>NoOfDays</th>
+            <th>LeaveType</th>
+            <th>LeaveReason</th>
+            <th>Action</th>
+            </tr>
+        </thead>
+    
+        <tbody >
+          <tr *ngFor="let leaverequest of leaveRequests">
+           
+            <td>{{leaverequest.leaveId}}</td>
+            <td>{{leaverequest.userId}}</td>
+            <td>{{leaverequest.leaveFrom}}</td>
+            <td>{{leaverequest.leaveTo}}</td>
+            <td>{{leaverequest.noOfDays}}</td>
+            <td>{{leaverequest.leaveType}} </td>
+            <td>{{leaverequest.leaveReason}} </td>
+            <td>
+                <button class="btn btn-secondary" (click)="addView(leaverequest.leaveId)" > View </button>
+            </td>
+
+            
+          </tr>
+        </tbody>
+      </table>
+  
